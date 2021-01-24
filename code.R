@@ -70,6 +70,8 @@ legislature_dur_pivot %>%
   theme(text=element_text(size=12, family="Trebuchet MS"))
 
 ggsave("legislature_full.svg")
+ggsave("legislature_full.png")
+
 
 legislature_dur_pivot94 %>% 
   filter(post1994 != "dal 1994") %>% 
@@ -83,9 +85,11 @@ legislature_dur_pivot94 %>%
   ylab("percentuale media legislatura") +
   theme_minimal() +
   guides(fill = "none") +
-  theme(text=element_text(size=12, family="Trebuchet MS")) 
+  theme(text=element_text(size=12, family="Trebuchet MS")) +
+  ggtitle("durata pre-1994")
 
 ggsave("legislature_pre94.svg")
+ggsave("legislature_pre94.png")
 
 
 legislature_dur_pivot94 %>% 
@@ -100,6 +104,8 @@ legislature_dur_pivot94 %>%
   ylab("percentuale media legislatura") +
   theme_minimal() +
   guides(fill = "none") +
-  theme(text=element_text(size=12, family="Trebuchet MS")) 
+  theme(text=element_text(size=12, family="Trebuchet MS"))  +
+  ggtitle("durata post-1994")
 
 ggsave("legislature_post94.svg")
+ggsave("legislature_post94.png")
