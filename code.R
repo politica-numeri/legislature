@@ -7,11 +7,11 @@ library(lubridate)
 library(RColorBrewer)
 library(extrafont)
 library(tidytext)
-font_import()
+#font_import()
 loadfonts(device = "win")
 
 
-legislature <- read.xlsx("legislature_20210125y.xlsx")
+legislature <- read.xlsx("legislature_20210125.xlsx")
 
 legislature <- legislature %>% 
   mutate(data_inizio_legislatura = convertToDate(data_inizio_legislatura),
